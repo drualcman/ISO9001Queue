@@ -1,0 +1,14 @@
+global using ISO9001.Core.Entities;
+global using ISO9001.Core.Interfaces.AuditLogs;
+global using ISO9001.Core.Interfaces.CustomerFeedbacks;
+global using ISO9001.Core.Interfaces.IncidentReports;
+global using ISO9001.Core.Interfaces.NonConformitys;
+global using ISO9001Queue.Database.EF.Configurations;
+global using ISO9001Queue.Database.EF.Contexts;
+global using ISO9001Queue.Database.EF.Entities;
+global using ISO9001Queue.Database.EF.Options;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Design;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.Extensions.Options;
+global using System.Linq.Expressions;

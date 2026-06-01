@@ -1,0 +1,16 @@
+global using System.Text.Json;
+global using ISO9001.Core.Dtos;
+global using ISO9001.Core.Interfaces.AuditLogs;
+global using ISO9001.Core.Interfaces.CustomerFeedbacks;
+global using ISO9001.Core.Interfaces.IncidentReports;
+global using ISO9001.Core.Interfaces.NonConformitys;
+global using ISO9001.Core.Interfaces.AuditReports;
+global using ISO9001.Core.Interfaces.DashBoards;
+global using ISO9001.Core.Interfaces.AuditEvents;
+global using ISO9001Queue.Contracts;
+global using ISO9001Queue.Contracts.Messages;
+global using ISO9001Queue.Infrastructure.Email;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.Azure.Functions.Worker;
+global using Microsoft.Extensions.Logging;

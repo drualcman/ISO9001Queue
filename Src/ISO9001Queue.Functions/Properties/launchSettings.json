@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ISO9001Queue.Functions": {
+      "commandName": "Project",
+      "commandLineArgs": "host start --useHttps --port 44787 --cors * --cert \"c:\\ssl\\localhost.pfx\" --password \"password\"",
+      "launchBrowser": false
+    }
+  }
+}

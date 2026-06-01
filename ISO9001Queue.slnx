@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Src/ISO9001Queue.Contracts/ISO9001Queue.Contracts.csproj" />
+  <Project Path="Src/ISO9001Queue.Database.EF/ISO9001Queue.Database.EF.csproj" />
+  <Project Path="Src/ISO9001Queue.Functions/ISO9001Queue.Functions.csproj" />
+  <Project Path="Src/ISO9001Queue.Infrastructure/ISO9001Queue.Infrastructure.csproj" />
+</Solution>
