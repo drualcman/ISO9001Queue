@@ -36,20 +36,14 @@ public static class DependencyContainer
         services.AddScoped<IWritableCustomerFeedbackDataContext>(sp => sp.GetRequiredService<Iso9001DbContext>());
         services.AddScoped<IQueryableCustomerFeedbackDataContext>(sp => sp.GetRequiredService<Iso9001DbContext>());
 
-        services.AddHttpClient(nameof(FeedbackEmailService), (sp, client) =>
+        services.AddHttpClient(EmailSender.HttpClientName, (sp, client) =>
         {
             EmailOptions opts = sp.GetRequiredService<IOptions<EmailOptions>>().Value;
             if (!string.IsNullOrWhiteSpace(opts.Url))
                 client.BaseAddress = new Uri(opts.Url);
         });
+        services.AddScoped<IEmailSender, EmailSender>();
         services.AddScoped<IFeedbackEmailService, FeedbackEmailService>();
-
-        services.AddHttpClient(nameof(UserDataEmailService), (sp, client) =>
-        {
-            EmailOptions opts = sp.GetRequiredService<IOptions<EmailOptions>>().Value;
-            if (!string.IsNullOrWhiteSpace(opts.Url))
-                client.BaseAddress = new Uri(opts.Url);
-        });
         services.AddScoped<IUserDataEmailService, UserDataEmailService>();
 
         return services;

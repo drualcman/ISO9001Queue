@@ -9,4 +9,5 @@ public record CustomerFeedbackQueueMessage(
     string CustomerAntiPhishing,
     int Rating,
     string Comments,
-    DateTime ReportedAt);
+    DateTime ReportedAt,
+    string Language = "en");
