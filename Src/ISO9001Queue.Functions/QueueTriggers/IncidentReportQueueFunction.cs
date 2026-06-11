@@ -10,7 +10,7 @@ internal sealed class IncidentReportQueueFunction(
         logger.LogInformation("Processing incident report message");
         try
         {
-            IncidentReportQueueMessage? msg = JsonSerializer.Deserialize<IncidentReportQueueMessage>(message);
+            IncidentReportQueueMessage? msg = QueueMessageSerializer.Deserialize<IncidentReportQueueMessage>(message);
             if (msg is null)
             { logger.LogWarning("Null incident report message received"); return; }
 

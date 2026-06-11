@@ -10,7 +10,7 @@ internal sealed class NonConformityQueueFunction(
         logger.LogInformation("Processing non-conformity message");
         try
         {
-            NonConformityQueueMessage? msg = JsonSerializer.Deserialize<NonConformityQueueMessage>(message);
+            NonConformityQueueMessage? msg = QueueMessageSerializer.Deserialize<NonConformityQueueMessage>(message);
             if (msg is null)
             { logger.LogWarning("Null non-conformity message received"); return; }
 

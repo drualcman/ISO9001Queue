@@ -40,7 +40,7 @@ internal sealed class FeedbackEmailService(
             string body = MailTemplates.GetEmailTemplate(bodyFragment, message.CompanyId, Text("ThankYouSubject"),
                 language, message.CustomerAntiPhishing, Text("Footer"));
 
-            await emailSender.SendAsync(subject, receiverName, message.CustomerEmail, message.CustomerAntiPhishing,
+            await emailSender.SendAsync(message.EmailCompanyId, subject, receiverName, message.CustomerEmail, message.CustomerAntiPhishing,
                 language, body, cancellationToken: cancellationToken);
         }
         catch (Exception ex)
@@ -76,7 +76,7 @@ internal sealed class FeedbackEmailService(
             string body = MailTemplates.GetEmailTemplate(bodyFragment, message.CompanyId, "Low Customer Rating Alert",
                 "en", footerText: "Internal quality alert generated automatically from customer feedback.");
 
-            await emailSender.SendAsync(subject, emailOptions.Value.AdminName, adminEmail, string.Empty,
+            await emailSender.SendAsync(message.EmailCompanyId, subject, emailOptions.Value.AdminName, adminEmail, string.Empty,
                 "en", body, cancellationToken: cancellationToken);
         }
         catch (Exception ex)

@@ -2,12 +2,11 @@ namespace ISO9001Queue.Infrastructure.Email;
 
 internal sealed class EmailSender(
     IHttpClientFactory httpClientFactory,
-    IOptions<EmailOptions> emailOptions,
     ILogger<EmailSender> logger) : IEmailSender
 {
     internal const string HttpClientName = nameof(EmailSender);
 
-    public async Task SendAsync(string subject, string receiverName, string receiverEmail, string antiPhishing,
+    public async Task SendAsync(int companyId, string subject, string receiverName, string receiverEmail, string antiPhishing,
         string language, string htmlBody, IReadOnlyList<EmailAttachment>? attachments = null,
         CancellationToken cancellationToken = default)
     {
@@ -15,7 +14,7 @@ internal sealed class EmailSender(
         var payload = new
         {
             Subject = subject,
-            CompanyId = emailOptions.Value.CompanyId,
+            CompanyId = companyId,
             Recipients = new[] { new { DisplayName = receiverName, Adressee = receiverEmail } },
             Content = htmlBody,
             AntiPhishing = antiPhishing ?? string.Empty,

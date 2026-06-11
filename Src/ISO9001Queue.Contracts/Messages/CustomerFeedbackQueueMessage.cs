@@ -7,6 +7,7 @@ public record CustomerFeedbackQueueMessage(
     string CustomerName,
     string CustomerEmail,
     string CustomerAntiPhishing,
+    int EmailCompanyId,
     int Rating,
     string Comments,
     DateTime ReportedAt,

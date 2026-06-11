@@ -16,7 +16,7 @@ internal sealed class UserDataQueueFunction(
         logger.LogInformation("Processing user data request message");
         try
         {
-            UserDataQueueMessage? msg = JsonSerializer.Deserialize<UserDataQueueMessage>(message);
+            UserDataQueueMessage? msg = QueueMessageSerializer.Deserialize<UserDataQueueMessage>(message);
             if (msg is null)
             { logger.LogWarning("Null user data request message received"); return; }
             if (string.IsNullOrWhiteSpace(msg.CompanyId) || string.IsNullOrWhiteSpace(msg.ReceiverEmail))

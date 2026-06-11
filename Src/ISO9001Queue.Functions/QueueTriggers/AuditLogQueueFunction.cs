@@ -10,7 +10,7 @@ internal sealed class AuditLogQueueFunction(
         logger.LogInformation("Processing audit log message");
         try
         {
-            AuditLogQueueMessage? msg = JsonSerializer.Deserialize<AuditLogQueueMessage>(message);
+            AuditLogQueueMessage? msg = QueueMessageSerializer.Deserialize<AuditLogQueueMessage>(message);
             if (msg is null)
             { logger.LogWarning("Null audit log message received"); return; }
 

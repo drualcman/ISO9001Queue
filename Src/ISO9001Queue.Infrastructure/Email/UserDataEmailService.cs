@@ -48,7 +48,7 @@ internal sealed class UserDataEmailService(IEmailSender emailSender) : IUserData
             language, message.ReceiverAntiPhishing, Text("Footer"));
 
         // EmailSender throws on failure so the queue retries: a data export must reach the user.
-        await emailSender.SendAsync(subject, receiverName, message.ReceiverEmail, message.ReceiverAntiPhishing,
+        await emailSender.SendAsync(message.EmailCompanyId, subject, receiverName, message.ReceiverEmail, message.ReceiverAntiPhishing,
             language, body, [new EmailAttachment(filename, jsonData)], cancellationToken);
     }
 }

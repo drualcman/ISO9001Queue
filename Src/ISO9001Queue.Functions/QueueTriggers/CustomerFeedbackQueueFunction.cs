@@ -13,7 +13,7 @@ internal sealed class CustomerFeedbackQueueFunction(
         logger.LogInformation("Processing customer feedback message");
         try
         {
-            CustomerFeedbackQueueMessage? msg = JsonSerializer.Deserialize<CustomerFeedbackQueueMessage>(message);
+            CustomerFeedbackQueueMessage? msg = QueueMessageSerializer.Deserialize<CustomerFeedbackQueueMessage>(message);
             if (msg is null)
             { logger.LogWarning("Null customer feedback message received"); return; }
 
