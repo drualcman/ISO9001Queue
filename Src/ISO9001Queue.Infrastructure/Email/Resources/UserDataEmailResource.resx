@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>Your personal data export</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>Dear {0},</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>As requested, attached to this email you will find a copy of all the information held about you in our quality management system, in JSON format.</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>The export may include, where applicable:</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>Activity and audit records</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>Incident reports related to your account</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>Feedback you have submitted</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>If you did not request this export or have any questions about the data included, please contact our support team.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Best regards,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>The {0} Quality Team</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>This email was generated automatically in response to a personal data request.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+</root>

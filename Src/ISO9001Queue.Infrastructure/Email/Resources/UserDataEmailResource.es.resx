@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>Tu exportación de datos personales</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>Hola {0}:</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>Tal y como solicitaste, adjunto a este correo encontrarás una copia de toda la información que guardamos sobre ti en nuestro sistema de gestión de calidad, en formato JSON.</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>La exportación puede incluir, según corresponda:</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>Registros de actividad y auditoría</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>Informes de incidencias relacionados con tu cuenta</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>Valoraciones y comentarios que has enviado</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>Si no solicitaste esta exportación o tienes alguna duda sobre los datos incluidos, ponte en contacto con nuestro equipo de soporte.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Un saludo,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>El equipo de calidad de {0}</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Este correo se ha generado automáticamente en respuesta a una solicitud de datos personales.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+</root>

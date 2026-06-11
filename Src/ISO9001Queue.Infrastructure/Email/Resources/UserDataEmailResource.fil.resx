@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>Ang export ng iyong personal na datos</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>Mahal na {0},</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>Tulad ng iyong hiniling, kalakip sa email na ito ang kopya ng lahat ng impormasyong hawak namin tungkol sa iyo sa aming quality management system, sa JSON na format.</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>Maaaring kasama sa export, kung naaangkop:</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>Mga tala ng aktibidad at audit</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>Mga ulat ng insidente na may kaugnayan sa iyong account</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>Mga feedback na iyong ipinadala</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>Kung hindi ikaw ang humiling ng export na ito o may tanong ka tungkol sa datos na kasama, mangyaring makipag-ugnayan sa aming support team.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Lubos na gumagalang,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>Ang {0} Quality Team</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Awtomatikong nabuo ang email na ito bilang tugon sa isang kahilingan sa personal na datos.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+</root>

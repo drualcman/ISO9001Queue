@@ -44,6 +44,14 @@ public static class DependencyContainer
         });
         services.AddScoped<IFeedbackEmailService, FeedbackEmailService>();
 
+        services.AddHttpClient(nameof(UserDataEmailService), (sp, client) =>
+        {
+            EmailOptions opts = sp.GetRequiredService<IOptions<EmailOptions>>().Value;
+            if (!string.IsNullOrWhiteSpace(opts.Url))
+                client.BaseAddress = new Uri(opts.Url);
+        });
+        services.AddScoped<IUserDataEmailService, UserDataEmailService>();
+
         return services;
     }
 }
