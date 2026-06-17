@@ -15,7 +15,7 @@ internal sealed class IncidentReportEntityConfiguration : IEntityTypeConfigurati
         builder.Property(x => x.AffectedProcess).HasMaxLength(512);
         builder.Property(x => x.Severity).HasMaxLength(64);
         builder.Property(x => x.Description).HasMaxLength(2048);
-        builder.Property(x => x.Data).HasColumnType("nvarchar(max)");
+        builder.Property(x => x.Data).HasMaxLength(4000);
         builder.HasIndex(x => x.CompanyId);
         builder.HasIndex(x => x.EntityId);
     }

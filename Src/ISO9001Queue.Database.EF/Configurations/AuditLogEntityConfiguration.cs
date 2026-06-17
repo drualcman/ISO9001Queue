@@ -14,7 +14,7 @@ internal sealed class AuditLogEntityConfiguration : IEntityTypeConfiguration<Aud
         builder.Property(x => x.Timestamp).IsRequired();
         builder.Property(x => x.CreatedAt).IsRequired();
         builder.Property(x => x.Details).HasMaxLength(2048);
-        builder.Property(x => x.Data).HasColumnType("nvarchar(max)");
+        builder.Property(x => x.Data).HasMaxLength(4000);
         builder.HasIndex(x => x.CompanyId);
         builder.HasIndex(x => x.EntityId);
     }

@@ -19,6 +19,7 @@ public static class DependencyContainer
         IConfiguration configuration)
     {
         services.Configure<DatabaseOptions>(configuration.GetSection(DatabaseOptions.SectionKey));
+        services.Configure<RetentionOptions>(configuration.GetSection(RetentionOptions.SectionKey));
         services.Configure<EmailOptions>(configuration.GetSection(EmailOptions.SectionKey));
 
         services.AddDbContext<Iso9001DbContext>();
@@ -35,6 +36,8 @@ public static class DependencyContainer
 
         services.AddScoped<IWritableCustomerFeedbackDataContext>(sp => sp.GetRequiredService<Iso9001DbContext>());
         services.AddScoped<IQueryableCustomerFeedbackDataContext>(sp => sp.GetRequiredService<Iso9001DbContext>());
+
+        services.AddScoped<IRetentionMaintenanceContext>(sp => sp.GetRequiredService<Iso9001DbContext>());
 
         services.AddHttpClient(EmailSender.HttpClientName, (sp, client) =>
         {

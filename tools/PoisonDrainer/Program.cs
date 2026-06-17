@@ -8,6 +8,7 @@ using Azure.Storage.Queues.Models;
 string? connectionString =
     args.Length > 0 ? args[0] : Environment.GetEnvironmentVariable("BLOB");
 
+
 if (string.IsNullOrWhiteSpace(connectionString))
 {
     Console.Error.WriteLine("Falta la cadena de conexion. Uso: dotnet run -- \"<connection-string>\"");
@@ -38,6 +39,7 @@ foreach (string poisonName in poisonQueues)
     await target.CreateIfNotExistsAsync();
 
     int moved = 0;
+    Console.WriteLine($"{poisonName}: moviviendo ");
     while (true)
     {
         // Long visibility so the same batch is not re-received while we process it.
@@ -47,14 +49,15 @@ foreach (string poisonName in poisonQueues)
 
         if (messages.Length == 0)
             break;
-
         foreach (QueueMessage message in messages)
         {
             // Body is the raw stored payload; re-send it verbatim (no re-encoding).
             await target.SendMessageAsync(message.Body);
             await source.DeleteMessageAsync(message.MessageId, message.PopReceipt);
+            Console.Write(".");
             moved++;
         }
+        Console.Write("");
         Console.WriteLine($"  {poisonName}: {moved} movidos...");
     }
 

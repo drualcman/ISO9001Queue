@@ -8,8 +8,12 @@ public sealed class Iso9001DbContext(IOptions<DatabaseOptions> dbOptions) : DbCo
     IWritableNonConformityDataContext,
     IQueryableNonConformityDataContext,
     IWritableCustomerFeedbackDataContext,
-    IQueryableCustomerFeedbackDataContext
+    IQueryableCustomerFeedbackDataContext,
+    IRetentionMaintenanceContext
 {
+    /// <summary>Maximum characters persisted in the debug <c>Data</c> column.</summary>
+    private const int MaxDataLength = 4000;
+
     internal DbSet<AuditLogEntity> AuditLogs => Set<AuditLogEntity>();
     internal DbSet<IncidentReportEntity> IncidentReports => Set<IncidentReportEntity>();
     internal DbSet<NonConformityEntity> NonConformities => Set<NonConformityEntity>();
@@ -50,7 +54,7 @@ public sealed class Iso9001DbContext(IOptions<DatabaseOptions> dbOptions) : DbCo
             Timestamp = auditLog.Timestamp,
             CreatedAt = DateTime.UtcNow,
             Details = auditLog.Details ?? string.Empty,
-            Data = auditLog.Data ?? string.Empty,
+            Data = Truncate(auditLog.Data),
         });
     }
 
@@ -86,7 +90,7 @@ public sealed class Iso9001DbContext(IOptions<DatabaseOptions> dbOptions) : DbCo
             Description = incidentReport.Description ?? string.Empty,
             AffectedProcess = incidentReport.AffectedProcess ?? string.Empty,
             Severity = incidentReport.Severity ?? string.Empty,
-            Data = incidentReport.Data ?? string.Empty,
+            Data = Truncate(incidentReport.Data),
         });
     }
 
@@ -226,7 +230,39 @@ public sealed class Iso9001DbContext(IOptions<DatabaseOptions> dbOptions) : DbCo
     Task IWritableNonConformityDataContext.SaveChangesAsync() => base.SaveChangesAsync();
     Task IWritableCustomerFeedbackDataContext.SaveChangesAsync() => base.SaveChangesAsync();
 
+    // ── Retention maintenance ─────────────────────────────────────────────────
+
+    async Task<int> IRetentionMaintenanceContext.ClearAuditLogDataAsync(DateTime olderThanUtc, CancellationToken cancellationToken)
+        => await AuditLogs
+            .Where(e => e.CreatedAt < olderThanUtc && e.Data != "")
+            .ExecuteUpdateAsync(s => s.SetProperty(e => e.Data, _ => ""), cancellationToken);
+
+    async Task<int> IRetentionMaintenanceContext.ClearIncidentReportDataAsync(DateTime olderThanUtc, CancellationToken cancellationToken)
+        => await IncidentReports
+            .Where(e => e.CreatedAt < olderThanUtc && e.Data != "")
+            .ExecuteUpdateAsync(s => s.SetProperty(e => e.Data, _ => ""), cancellationToken);
+
+    async Task<int> IRetentionMaintenanceContext.DeleteExpiredRecordsAsync(DateTime olderThanUtc, CancellationToken cancellationToken)
+    {
+        int removed = 0;
+        // Details first; NonConformities cascade-delete their details at the DB level too,
+        // but deleting orphan-aged details explicitly keeps the operation predictable.
+        removed += await NonConformityDetails.Where(e => e.CreatedAt < olderThanUtc).ExecuteDeleteAsync(cancellationToken);
+        removed += await NonConformities.Where(e => e.CreatedAt < olderThanUtc).ExecuteDeleteAsync(cancellationToken);
+        removed += await AuditLogs.Where(e => e.CreatedAt < olderThanUtc).ExecuteDeleteAsync(cancellationToken);
+        removed += await IncidentReports.Where(e => e.CreatedAt < olderThanUtc).ExecuteDeleteAsync(cancellationToken);
+        removed += await CustomerFeedbacks.Where(e => e.CreatedAt < olderThanUtc).ExecuteDeleteAsync(cancellationToken);
+        return removed;
+    }
+
     // ── Private helpers ───────────────────────────────────────────────────────
+
+    private static string Truncate(string? value)
+    {
+        if (string.IsNullOrEmpty(value))
+            return string.Empty;
+        return value.Length <= MaxDataLength ? value : value[..MaxDataLength];
+    }
 
     private static async Task<IEnumerable<T>> QueryReadModels<T>(
         IQueryable<T> source,

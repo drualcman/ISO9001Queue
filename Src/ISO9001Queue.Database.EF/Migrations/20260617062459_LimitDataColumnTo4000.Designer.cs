@@ -4,6 +4,7 @@ using ISO9001Queue.Database.EF.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ISO9001Queue.Database.EF.Migrations
 {
     [DbContext(typeof(Iso9001DbContext))]
-    partial class Iso9001DbContextModelSnapshot : ModelSnapshot
+    [Migration("20260617062459_LimitDataColumnTo4000")]
+    partial class LimitDataColumnTo4000
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
