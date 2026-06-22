@@ -8,7 +8,7 @@ public sealed class Iso9001AuditLogFunction(
 {
     [Function("iso9001-audit-logs")]
     public async Task<IActionResult> GetAll(
-        [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "iso9001/audit-logs")] HttpRequest req)
+        [HttpTrigger(AuthorizationLevel.Function, "get", Route = "iso9001/audit-logs")] HttpRequest req)
     {
         string companyId = req.Query["companyId"].ToString();
         if (string.IsNullOrWhiteSpace(companyId))
