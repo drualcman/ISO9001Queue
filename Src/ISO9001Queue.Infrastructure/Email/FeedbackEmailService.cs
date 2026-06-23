@@ -74,10 +74,10 @@ internal sealed class FeedbackEmailService(
 
             string subject = $"[Quality Alert] Low rating ({message.Rating}/5) from {message.CustomerName}";
             string body = MailTemplates.GetEmailTemplate(bodyFragment, message.CompanyId, "Low Customer Rating Alert",
-                "en", footerText: "Internal quality alert generated automatically from customer feedback.");
+                message.Language, footerText: "Internal quality alert generated automatically from customer feedback.");
 
             await emailSender.SendAsync(message.EmailCompanyId, subject, emailOptions.Value.AdminName, adminEmail, string.Empty,
-                "en", body, cancellationToken: cancellationToken);
+                message.Language, body, cancellationToken: cancellationToken);
         }
         catch (Exception ex)
         {
