@@ -7,6 +7,7 @@ public sealed class Iso9001FeedbackFunction(
     ICustomerFeedbackByEntityIdQuery byEntityQuery,
     IAnalyzeCustomerFeedbackQuery analyzeQuery)
 {
+
     [Function("iso9001-feedback-list")]
     public async Task<IActionResult> GetAll(
         [HttpTrigger(AuthorizationLevel.Function, "get", Route = "iso9001/feedbacks")] HttpRequest req)

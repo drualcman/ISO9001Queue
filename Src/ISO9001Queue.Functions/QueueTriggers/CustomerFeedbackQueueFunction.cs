@@ -3,6 +3,7 @@ namespace ISO9001Queue.Functions.QueueTriggers;
 internal sealed class CustomerFeedbackQueueFunction(
     IRegisterCustomerFeedback registerCustomerFeedback,
     IFeedbackEmailService feedbackEmailService,
+    IFeedbackSummaryPublisher feedbackSummaryPublisher,
     ILogger<CustomerFeedbackQueueFunction> logger)
 {
     private const int LowRatingThreshold = 2;
@@ -24,6 +25,17 @@ internal sealed class CustomerFeedbackQueueFunction(
                 msg.Rating,
                 msg.Comments,
                 msg.ReportedAt));
+
+            // Refresh the public summary blob the landing page reads. Non-fatal: a failure here must
+            // not re-queue the feedback (which would resend the thank-you/low-rating emails).
+            try
+            {
+                await feedbackSummaryPublisher.PublishAsync(msg.CompanyId);
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Failed to publish feedback summary for {CompanyId}", msg.CompanyId);
+            }
 
             if (!string.IsNullOrWhiteSpace(msg.CustomerEmail))
             {

@@ -10,6 +10,8 @@ global using ISO9001.Core.Interfaces.AuditEvents;
 global using ISO9001Queue.Contracts;
 global using ISO9001Queue.Contracts.Messages;
 global using ISO9001Queue.Infrastructure.Email;
+global using ISO9001Queue.Infrastructure.Feedback;
+global using ISO9001Queue.Infrastructure.Options;
 global using Microsoft.AspNetCore.Http;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.Azure.Functions.Worker;

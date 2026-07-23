@@ -5,6 +5,7 @@ using ISO9001.Core.Interfaces.NonConformitys;
 using ISO9001Queue.Database.EF.Contexts;
 using ISO9001Queue.Database.EF.Options;
 using ISO9001Queue.Infrastructure.Email;
+using ISO9001Queue.Infrastructure.Feedback;
 using ISO9001Queue.Infrastructure.Options;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,6 +22,15 @@ public static class DependencyContainer
         services.Configure<DatabaseOptions>(configuration.GetSection(DatabaseOptions.SectionKey));
         services.Configure<RetentionOptions>(configuration.GetSection(RetentionOptions.SectionKey));
         services.Configure<EmailOptions>(configuration.GetSection(EmailOptions.SectionKey));
+
+        services.Configure<FeedbackSummaryOptions>(configuration.GetSection(FeedbackSummaryOptions.SectionKey));
+        // Reuse the same storage account as the feedback queue trigger ("Blob") unless overridden.
+        services.PostConfigure<FeedbackSummaryOptions>(o =>
+        {
+            if (string.IsNullOrWhiteSpace(o.ConnectionString))
+                o.ConnectionString = configuration["Blob"] ?? string.Empty;
+        });
+        services.AddScoped<IFeedbackSummaryPublisher, FeedbackSummaryPublisher>();
 
         services.AddDbContext<Iso9001DbContext>();
 
