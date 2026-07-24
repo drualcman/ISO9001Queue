@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ThankYouSubject" xml:space="preserve">
+    <value>感谢您的反馈</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>尊敬的 {0}：</value>
+  </data>
+  <data name="ThankYouIntro" xml:space="preserve">
+    <value>感谢您的反馈！我们已收到您的评分 &lt;strong&gt;{0}/5&lt;/strong&gt;（{1}）。</value>
+  </data>
+  <data name="YourComments" xml:space="preserve">
+    <value>您的评论：</value>
+  </data>
+  <data name="ThankYouOutro" xml:space="preserve">
+    <value>您的意见帮助我们持续改进服务。</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>此致敬礼，</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>质量团队</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>此邮件是针对您提交的反馈自动发送的。</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>客户</value>
+  </data>
+</root>

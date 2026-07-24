@@ -8,12 +8,14 @@ namespace ISO9001Queue.Infrastructure.Email;
 /// </summary>
 internal static class MailTemplates
 {
-    /// <summary>Maps a free-form language code to a supported language (en, es, fil) and its culture.</summary>
+    /// <summary>Maps a free-form language code to a supported language (en, es, fil, zh, ru) and its culture.</summary>
     public static (string Language, CultureInfo Culture) ResolveLanguage(string? language)
     {
         string code = (language ?? string.Empty).Trim().ToLowerInvariant();
         if (code.StartsWith("es")) return ("es", CultureInfo.GetCultureInfo("es"));
         if (code.StartsWith("fil") || code.StartsWith("tl")) return ("fil", CultureInfo.GetCultureInfo("fil"));
+        if (code.StartsWith("zh")) return ("zh", CultureInfo.GetCultureInfo("zh"));
+        if (code.StartsWith("ru")) return ("ru", CultureInfo.GetCultureInfo("ru"));
         return ("en", CultureInfo.InvariantCulture);
     }
 

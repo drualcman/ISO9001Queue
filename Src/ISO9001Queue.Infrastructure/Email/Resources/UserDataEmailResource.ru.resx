@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>Экспорт ваших персональных данных</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>Уважаемый(ая) {0},</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>По вашему запросу к этому письму прикреплена копия всей информации о вас, хранящейся в нашей системе управления качеством, в формате JSON.</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>Экспорт может включать, где применимо:</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>Записи активности и аудита</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>Отчёты об инцидентах, связанных с вашей учётной записью</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>Оставленные вами отзывы</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>Если вы не запрашивали этот экспорт или у вас есть вопросы о включённых данных, свяжитесь с нашей службой поддержки.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>С уважением,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>Команда качества {0}</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Это письмо было создано автоматически в ответ на запрос персональных данных.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>Клиент</value>
+  </data>
+</root>

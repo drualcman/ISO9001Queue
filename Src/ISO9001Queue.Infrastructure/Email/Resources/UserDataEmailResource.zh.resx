@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>您的个人数据导出</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>尊敬的 {0}：</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>根据您的请求，本邮件附件中包含我们质量管理系统中保存的关于您的所有信息副本，采用 JSON 格式。</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>该导出可能包含（如适用）：</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>活动和审计记录</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>与您账户相关的事件报告</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>您提交的反馈</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>如果您并未请求此导出，或对所含数据有任何疑问，请联系我们的支持团队。</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>此致敬礼，</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>{0} 质量团队</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>此邮件是针对个人数据请求自动生成的。</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>客户</value>
+  </data>
+</root>
