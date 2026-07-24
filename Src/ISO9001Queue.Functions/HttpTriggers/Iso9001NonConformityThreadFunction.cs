@@ -31,8 +31,10 @@ public sealed class Iso9001NonConformityThreadFunction(
         string entityId)
     {
         string companyId = req.Query["companyId"].ToString();
-        if (string.IsNullOrWhiteSpace(companyId)) return new BadRequestObjectResult("companyId is required");
-        if (string.IsNullOrWhiteSpace(entityId)) return new BadRequestObjectResult("entityId is required");
+        if (string.IsNullOrWhiteSpace(companyId))
+            return new BadRequestObjectResult("companyId is required");
+        if (string.IsNullOrWhiteSpace(entityId))
+            return new BadRequestObjectResult("entityId is required");
 
         DateTime? from = ParseDate(req.Query["from"]);
         DateTime? end = ParseDate(req.Query["end"]);
@@ -44,7 +46,8 @@ public sealed class Iso9001NonConformityThreadFunction(
             nc => nc.OrderByDescending(x => x.ReportedAt));
 
         List<string> ids = masters.Select(m => m.Id).ToList();
-        if (ids.Count == 0) return new OkObjectResult(Array.Empty<NonConformityThreadSummaryResponse>());
+        if (ids.Count == 0)
+            return new OkObjectResult(Array.Empty<NonConformityThreadSummaryResponse>());
 
         IEnumerable<NonConformityDetailReadModel> details = await query.ToNonConformityDetailListAsync(
             d => ids.Contains(d.NonConformityId),
@@ -64,11 +67,14 @@ public sealed class Iso9001NonConformityThreadFunction(
         string id)
     {
         string companyId = req.Query["companyId"].ToString();
-        if (string.IsNullOrWhiteSpace(companyId)) return new BadRequestObjectResult("companyId is required");
-        if (!Guid.TryParse(id, out Guid threadId)) return new BadRequestObjectResult("id must be a valid GUID");
+        if (string.IsNullOrWhiteSpace(companyId))
+            return new BadRequestObjectResult("companyId is required");
+        if (!Guid.TryParse(id, out Guid threadId))
+            return new BadRequestObjectResult("id must be a valid GUID");
 
         NonConformityReadModel? master = await FindMasterAsync(companyId, threadId);
-        if (master is null) return new NotFoundResult();
+        if (master is null)
+            return new NotFoundResult();
 
         string masterId = master.Id;
         IEnumerable<NonConformityDetailReadModel> details = await query.ToNonConformityDetailListAsync(
@@ -96,10 +102,14 @@ public sealed class Iso9001NonConformityThreadFunction(
         [HttpTrigger(AuthorizationLevel.Function, "post", Route = "iso9001/non-conformities/thread")] HttpRequest req)
     {
         CreateThreadRequest? request = await req.ReadFromJsonAsync<CreateThreadRequest>();
-        if (request is null) return new BadRequestObjectResult("Invalid request body");
-        if (string.IsNullOrWhiteSpace(request.CompanyId)) return new BadRequestObjectResult("companyId is required");
-        if (string.IsNullOrWhiteSpace(request.EntityId)) return new BadRequestObjectResult("entityId is required");
-        if (string.IsNullOrWhiteSpace(request.Description)) return new BadRequestObjectResult("description is required");
+        if (request is null)
+            return new BadRequestObjectResult("Invalid request body");
+        if (string.IsNullOrWhiteSpace(request.CompanyId))
+            return new BadRequestObjectResult("companyId is required");
+        if (string.IsNullOrWhiteSpace(request.EntityId))
+            return new BadRequestObjectResult("entityId is required");
+        if (string.IsNullOrWhiteSpace(request.Description))
+            return new BadRequestObjectResult("description is required");
 
         Guid id = Guid.NewGuid();
         DateTime reportedAt = request.ReportedAt == default ? DateTime.UtcNow : request.ReportedAt;
@@ -140,15 +150,20 @@ public sealed class Iso9001NonConformityThreadFunction(
         string id)
     {
         AddMessageRequest? request = await req.ReadFromJsonAsync<AddMessageRequest>();
-        if (request is null) return new BadRequestObjectResult("Invalid request body");
-        if (string.IsNullOrWhiteSpace(request.CompanyId)) return new BadRequestObjectResult("companyId is required");
-        if (string.IsNullOrWhiteSpace(request.Description)) return new BadRequestObjectResult("description is required");
-        if (!Guid.TryParse(id, out Guid threadId)) return new BadRequestObjectResult("id must be a valid GUID");
+        if (request is null)
+            return new BadRequestObjectResult("Invalid request body");
+        if (string.IsNullOrWhiteSpace(request.CompanyId))
+            return new BadRequestObjectResult("companyId is required");
+        if (string.IsNullOrWhiteSpace(request.Description))
+            return new BadRequestObjectResult("description is required");
+        if (!Guid.TryParse(id, out Guid threadId))
+            return new BadRequestObjectResult("id must be a valid GUID");
 
         // Ownership check before writing: without it a caller could append messages to another
         // tenant's thread just by knowing (or guessing) a GUID.
         NonConformityReadModel? master = await FindMasterAsync(request.CompanyId, threadId);
-        if (master is null) return new NotFoundResult();
+        if (master is null)
+            return new NotFoundResult();
 
         string status = Normalize(request.Status, master.Status);
 
@@ -174,13 +189,18 @@ public sealed class Iso9001NonConformityThreadFunction(
         string id)
     {
         UpdateThreadStatusRequest? request = await req.ReadFromJsonAsync<UpdateThreadStatusRequest>();
-        if (request is null) return new BadRequestObjectResult("Invalid request body");
-        if (string.IsNullOrWhiteSpace(request.CompanyId)) return new BadRequestObjectResult("companyId is required");
-        if (string.IsNullOrWhiteSpace(request.Status)) return new BadRequestObjectResult("status is required");
-        if (!Guid.TryParse(id, out Guid threadId)) return new BadRequestObjectResult("id must be a valid GUID");
+        if (request is null)
+            return new BadRequestObjectResult("Invalid request body");
+        if (string.IsNullOrWhiteSpace(request.CompanyId))
+            return new BadRequestObjectResult("companyId is required");
+        if (string.IsNullOrWhiteSpace(request.Status))
+            return new BadRequestObjectResult("status is required");
+        if (!Guid.TryParse(id, out Guid threadId))
+            return new BadRequestObjectResult("id must be a valid GUID");
 
         NonConformityReadModel? master = await FindMasterAsync(request.CompanyId, threadId);
-        if (master is null) return new NotFoundResult();
+        if (master is null)
+            return new NotFoundResult();
 
         master.Status = Normalize(request.Status, master.Status);
         await writer.UpdateNonConformityAsync(master);
