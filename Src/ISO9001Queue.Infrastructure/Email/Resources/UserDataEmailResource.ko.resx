@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>개인정보 내보내기 결과</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>{0}님, 안녕하세요.</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>요청하신 대로, 저희 품질경영 시스템에 보관된 회원님에 관한 모든 정보의 사본을 JSON 형식으로 이 이메일에 첨부해 드립니다.</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>내보내기 파일에는 해당하는 경우 다음이 포함될 수 있습니다:</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>활동 및 감사 기록</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>회원님의 계정과 관련된 사건 보고</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>회원님이 보내주신 의견</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>본 내보내기를 요청하지 않으셨거나 포함된 정보에 대해 궁금한 점이 있으시면 고객 지원팀에 문의해 주세요.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>감사합니다.</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>{0} 품질팀 드림</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>본 메일은 개인정보 요청에 따라 자동으로 생성되었습니다.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>고객</value>
+  </data>
+</root>

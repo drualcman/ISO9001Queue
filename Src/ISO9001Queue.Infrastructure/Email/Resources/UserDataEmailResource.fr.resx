@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>Export de vos données personnelles</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>Cher(e) {0},</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>Comme demandé, vous trouverez en pièce jointe de cet e-mail une copie de toutes les informations vous concernant conservées dans notre système de gestion de la qualité, au format JSON.</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>L'export peut inclure, le cas échéant :</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>Registres d'activité et d'audit</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>Rapports d'incidents liés à votre compte</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>Les avis que vous avez soumis</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>Si vous n'avez pas demandé cet export ou si vous avez des questions sur les données incluses, veuillez contacter notre équipe support.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Cordialement,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>L'équipe Qualité {0}</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Cet e-mail a été généré automatiquement en réponse à une demande de données personnelles.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>Client</value>
+  </data>
+</root>

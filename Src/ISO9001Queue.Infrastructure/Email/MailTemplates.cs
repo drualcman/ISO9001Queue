@@ -16,6 +16,9 @@ internal static class MailTemplates
         if (code.StartsWith("fil") || code.StartsWith("tl")) return ("fil", CultureInfo.GetCultureInfo("fil"));
         if (code.StartsWith("zh")) return ("zh", CultureInfo.GetCultureInfo("zh"));
         if (code.StartsWith("ru")) return ("ru", CultureInfo.GetCultureInfo("ru"));
+        if (code.StartsWith("fr")) return ("fr", CultureInfo.GetCultureInfo("fr"));
+        if (code.StartsWith("ko")) return ("ko", CultureInfo.GetCultureInfo("ko"));
+        if (code.StartsWith("it")) return ("it", CultureInfo.GetCultureInfo("it"));
         return ("en", CultureInfo.InvariantCulture);
     }
 
