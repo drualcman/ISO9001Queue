@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>การส่งออกข้อมูลส่วนบุคคลของท่าน</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>เรียนคุณ {0}</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>ตามที่ท่านร้องขอ ท่านสามารถพบสำเนาข้อมูลทั้งหมดที่เรามีเกี่ยวกับท่านในระบบบริหารคุณภาพของเราได้ในไฟล์แนบของอีเมลฉบับนี้ ในรูปแบบ JSON</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>ข้อมูลที่ส่งออกอาจรวมถึง (หากมี):</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>บันทึกกิจกรรมและการตรวจสอบ</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>รายงานเหตุการณ์ที่เกี่ยวข้องกับบัญชีของท่าน</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>ความคิดเห็นที่ท่านได้ส่งมา</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>หากท่านไม่ได้ร้องขอการส่งออกข้อมูลนี้ หรือมีข้อสงสัยใด ๆ เกี่ยวกับข้อมูลที่รวมอยู่ในไฟล์นี้ กรุณาติดต่อทีมสนับสนุนของเรา</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>ด้วยความเคารพ</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>ทีมงานด้านคุณภาพของ {0}</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>อีเมลฉบับนี้ถูกสร้างขึ้นโดยอัตโนมัติเพื่อตอบกลับคำร้องขอข้อมูลส่วนบุคคล</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>ลูกค้า</value>
+  </data>
+</root>
