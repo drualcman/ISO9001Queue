@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ThankYouSubject" xml:space="preserve">
+    <value>Vielen Dank für Ihr Feedback</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>Sehr geehrte(r) {0},</value>
+  </data>
+  <data name="ThankYouIntro" xml:space="preserve">
+    <value>Vielen Dank für Ihr Feedback! Wir haben Ihre Bewertung von &lt;strong&gt;{0}/5&lt;/strong&gt; ({1}) erhalten.</value>
+  </data>
+  <data name="YourComments" xml:space="preserve">
+    <value>Ihre Kommentare:</value>
+  </data>
+  <data name="ThankYouOutro" xml:space="preserve">
+    <value>Ihre Meinung hilft uns, unseren Service kontinuierlich zu verbessern.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Mit freundlichen Grüßen,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>Das Qualitätsteam</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Diese E-Mail wurde automatisch als Antwort auf das von Ihnen übermittelte Feedback versendet.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>Kunde</value>
+  </data>
+</root>

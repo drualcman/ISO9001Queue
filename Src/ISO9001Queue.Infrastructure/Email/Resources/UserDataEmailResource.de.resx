@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>Export Ihrer personenbezogenen Daten</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>Sehr geehrte(r) {0},</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>Wie angefordert, finden Sie im Anhang dieser E-Mail eine Kopie aller in unserem Qualitätsmanagementsystem über Sie gespeicherten Informationen im JSON-Format.</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>Der Export kann, sofern zutreffend, Folgendes enthalten:</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>Aktivitäts- und Prüfprotokolle</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>Vorfallberichte im Zusammenhang mit Ihrem Konto</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>Von Ihnen übermitteltes Feedback</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>Falls Sie diesen Export nicht angefordert haben oder Fragen zu den enthaltenen Daten haben, wenden Sie sich bitte an unser Support-Team.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Mit freundlichen Grüßen,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>Das {0} Qualitätsteam</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Diese E-Mail wurde automatisch als Antwort auf eine Anfrage zu personenbezogenen Daten generiert.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>Kunde</value>
+  </data>
+</root>
