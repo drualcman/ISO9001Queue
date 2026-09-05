@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>Ekspor data pribadi Anda</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>Yth. {0},</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>Sesuai permintaan Anda, terlampir pada email ini Anda akan menemukan salinan seluruh informasi tentang Anda yang tersimpan dalam sistem manajemen mutu kami, dalam format JSON.</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>Ekspor ini dapat mencakup, jika berlaku:</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>Catatan aktivitas dan audit</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>Laporan insiden terkait akun Anda</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>Masukan yang telah Anda kirimkan</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>Jika Anda tidak meminta ekspor ini atau memiliki pertanyaan tentang data yang disertakan, silakan hubungi tim dukungan kami.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Salam hormat,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>Tim Kualitas {0}</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Email ini dibuat secara otomatis sebagai tanggapan atas permintaan data pribadi.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>Pelanggan</value>
+  </data>
+</root>
