@@ -1,3 +1,4 @@
+using ISO9001Queue.Infrastructure.Blobs;
 using System.Globalization;
 using System.Resources;
 
@@ -5,6 +6,7 @@ namespace ISO9001Queue.Infrastructure.Email;
 
 internal sealed class UserDataEmailService(
     IEmailSender emailSender,
+    IUserDataDownloadStore downloadStore,
     IOptions<EmailOptions> emailOptions,
     ILogger<UserDataEmailService> logger) : IUserDataEmailService
 {
@@ -20,11 +22,43 @@ internal sealed class UserDataEmailService(
         string companyName = string.IsNullOrWhiteSpace(message.CompanyName) ? message.CompanyId : message.CompanyName;
         string receiverName = string.IsNullOrWhiteSpace(message.ReceiverName) ? Text("DefaultReceiverName") : message.ReceiverName;
         string timestamp = DateTime.UtcNow.ToString("yyyyMMdd-HHmmss");
+        string fileName = $"quality-data-{timestamp}.zip";
         string subject = $"[{companyName}] {Text("Subject")}";
+
+        // El JSON viaja SIEMPRE comprimido: en crudo, el de una cuenta activa no llega a la bandeja
+        // del usuario (lo rechaza el proveedor o se pasa del tiempo de espera de la API de correo).
+        byte[] archive = UserDataArchiveBuilder.Compress(jsonData, $"quality-data-{timestamp}.json");
+        logger.LogInformation("Quality data export packed: {RawBytes} bytes of JSON -> {ZipBytes} bytes zipped",
+            jsonData.LongLength, archive.LongLength);
+
+        bool attach = archive.LongLength <= emailOptions.Value.MaxAttachmentBytes;
+        UserDataDownload? download = attach
+            ? null
+            : await downloadStore.PublishAsync(fileName, archive, cancellationToken);
+
+        string body = BuildBody(Text, companyName, receiverName, language, message.ReceiverAntiPhishing, download);
+        EmailAttachment[] attachments = attach ? [new EmailAttachment(fileName, archive)] : [];
+
+        // EmailSender throws on failure so the queue retries: a data export must reach the user.
+        await emailSender.SendAsync(message.EmailCompanyId, subject, receiverName, message.ReceiverEmail, message.ReceiverAntiPhishing,
+            language, body, attachments, cancellationToken);
+    }
+
+    private static string BuildBody(Func<string, string> Text, string companyName, string receiverName,
+        string language, string antiPhishing, UserDataDownload? download)
+    {
+        string intro = download is null
+            ? $"""<p style="margin:0 0 16px;">{Text("Intro")}</p>"""
+            : $"""
+              <p style="margin:0 0 16px;">{string.Format(Text("IntroLink"), download.Days)}</p>
+              <p style="margin:0 0 16px;">
+                  <a href="{download.Url}" style="color:#4a6584;font-weight:bold;">{Text("DownloadText")}</a>
+              </p>
+              """;
 
         string bodyFragment = $"""
             <p style="margin:0 0 16px;">{string.Format(Text("Greeting"), receiverName)}</p>
-            <p style="margin:0 0 16px;">{Text("Intro")}</p>
+            {intro}
             <p style="margin:0 0 8px;">{Text("MayInclude")}</p>
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
                    style="border-collapse:collapse;background-color:#f8f9fb;border-left:4px solid #4a6584;border-radius:6px;margin:0 0 20px;">
@@ -46,14 +80,7 @@ internal sealed class UserDataEmailService(
             </p>
             """;
 
-        string body = MailTemplates.GetEmailTemplate(bodyFragment, companyName, Text("Subject"),
-            language, message.ReceiverAntiPhishing, Text("Footer"));
-
-        EmailAttachment attachment = UserDataAttachmentBuilder.Build(
-            jsonData, timestamp, emailOptions.Value.MaxAttachmentBytes, logger);
-
-        // EmailSender throws on failure so the queue retries: a data export must reach the user.
-        await emailSender.SendAsync(message.EmailCompanyId, subject, receiverName, message.ReceiverEmail, message.ReceiverAntiPhishing,
-            language, body, [attachment], cancellationToken);
+        return MailTemplates.GetEmailTemplate(bodyFragment, companyName, Text("Subject"),
+            language, antiPhishing, Text("Footer"));
     }
 }

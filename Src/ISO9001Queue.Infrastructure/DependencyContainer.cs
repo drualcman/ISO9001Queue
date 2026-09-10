@@ -4,6 +4,7 @@ using ISO9001.Core.Interfaces.IncidentReports;
 using ISO9001.Core.Interfaces.NonConformitys;
 using ISO9001Queue.Database.EF.Contexts;
 using ISO9001Queue.Database.EF.Options;
+using ISO9001Queue.Infrastructure.Blobs;
 using ISO9001Queue.Infrastructure.Email;
 using ISO9001Queue.Infrastructure.Feedback;
 using ISO9001Queue.Infrastructure.Options;
@@ -22,6 +23,15 @@ public static class DependencyContainer
         services.Configure<DatabaseOptions>(configuration.GetSection(DatabaseOptions.SectionKey));
         services.Configure<RetentionOptions>(configuration.GetSection(RetentionOptions.SectionKey));
         services.Configure<EmailOptions>(configuration.GetSection(EmailOptions.SectionKey));
+
+        services.Configure<UserDataBlobOptions>(configuration.GetSection(UserDataBlobOptions.SectionKey));
+        // Same storage account as the queue triggers ("Blob") unless overridden.
+        services.PostConfigure<UserDataBlobOptions>(o =>
+        {
+            if (string.IsNullOrWhiteSpace(o.ConnectionString))
+                o.ConnectionString = configuration["Blob"] ?? string.Empty;
+        });
+        services.AddScoped<IUserDataDownloadStore, UserDataDownloadStore>();
 
         services.Configure<FeedbackSummaryOptions>(configuration.GetSection(FeedbackSummaryOptions.SectionKey));
         // Reuse the same storage account as the feedback queue trigger ("Blob") unless overridden.

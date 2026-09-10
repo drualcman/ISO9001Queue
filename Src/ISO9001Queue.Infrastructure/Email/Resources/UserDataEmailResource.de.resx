@@ -48,4 +48,4 @@
   <data name="DefaultReceiverName" xml:space="preserve">
     <value>Kunde</value>
   </data>
-</root>
+<data name="IntroLink" xml:space="preserve"><value>Wie gewünscht finden Sie hier eine Kopie aller Informationen, die wir in unserem Qualitätsmanagementsystem über Sie speichern, im JSON-Format. Die Datei ist zu groß für einen Anhang, Sie können sie daher über den folgenden Link herunterladen. Der Link ist {0} Tage gültig, danach wird die Datei gelöscht.</value></data><data name="DownloadText" xml:space="preserve"><value>Meine Daten herunterladen</value></data></root>

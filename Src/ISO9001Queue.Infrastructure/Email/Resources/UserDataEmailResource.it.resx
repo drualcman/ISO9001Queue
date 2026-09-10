@@ -48,4 +48,4 @@
   <data name="DefaultReceiverName" xml:space="preserve">
     <value>Cliente</value>
   </data>
-</root>
+<data name="IntroLink" xml:space="preserve"><value>Come richiesto, ecco una copia di tutte le informazioni che conserviamo su di te nel nostro sistema di gestione della qualità, in formato JSON. Il file è troppo grande per essere allegato: puoi scaricarlo dal link qui sotto. Il link resta valido {0} giorni, dopodiché il file viene eliminato.</value></data><data name="DownloadText" xml:space="preserve"><value>Scarica i miei dati</value></data></root>

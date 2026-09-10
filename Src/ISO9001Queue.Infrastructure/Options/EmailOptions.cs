@@ -16,9 +16,9 @@ public class EmailOptions
     public int TimeoutMinutes { get; set; } = 10;
 
     /// <summary>
-    /// Biggest attachment that is worth sending. Providers cap at ~25 MB and that cap applies to the
-    /// Base64 payload, which inflates raw bytes by ~37%; anything above this is rejected, so it is
-    /// caught here — with the real size in the log — instead of failing five times against the API.
+    /// Biggest attachment that is worth sending. It is not the provider cap (~25 MB over Base64): it
+    /// is a size the messaging API answers well within its timeout. A zip over this is left in blob
+    /// storage and the email carries a download link instead.
     /// </summary>
-    public long MaxAttachmentBytes { get; set; } = 15 * 1024 * 1024;
+    public long MaxAttachmentBytes { get; set; } = 3 * 1024 * 1024 + 333 * 1024 + 333;
 }
