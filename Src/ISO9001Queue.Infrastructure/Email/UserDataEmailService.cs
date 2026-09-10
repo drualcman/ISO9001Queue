@@ -31,12 +31,14 @@ internal sealed class UserDataEmailService(
         logger.LogInformation("Quality data export packed: {RawBytes} bytes of JSON -> {ZipBytes} bytes zipped",
             jsonData.LongLength, archive.LongLength);
 
+        // El fichero se deja SIEMPRE en el contenedor, quepa o no en el correo: el contenedor lo borra
+        // solo a los 7 días, y así el enlace es la red de seguridad para el usuario cuyo servidor de
+        // correo le quita los adjuntos. El tamaño sólo decide si además viaja adjunto.
+        UserDataDownload download = await downloadStore.PublishAsync(fileName, archive, cancellationToken);
         bool attach = archive.LongLength <= emailOptions.Value.MaxAttachmentBytes;
-        UserDataDownload? download = attach
-            ? null
-            : await downloadStore.PublishAsync(fileName, archive, cancellationToken);
 
-        string body = BuildBody(Text, companyName, receiverName, language, message.ReceiverAntiPhishing, download);
+        string body = BuildBody(Text, companyName, receiverName, language, message.ReceiverAntiPhishing,
+            download, attach);
         EmailAttachment[] attachments = attach ? [new EmailAttachment(fileName, archive)] : [];
 
         // EmailSender throws on failure so the queue retries: a data export must reach the user.
@@ -45,16 +47,20 @@ internal sealed class UserDataEmailService(
     }
 
     private static string BuildBody(Func<string, string> Text, string companyName, string receiverName,
-        string language, string antiPhishing, UserDataDownload? download)
+        string language, string antiPhishing, UserDataDownload download, bool attach)
     {
-        string intro = download is null
-            ? $"""<p style="margin:0 0 16px;">{Text("Intro")}</p>"""
-            : $"""
-              <p style="margin:0 0 16px;">{string.Format(Text("IntroLink"), download.Days)}</p>
-              <p style="margin:0 0 16px;">
-                  <a href="{download.Url}" style="color:#4a6584;font-weight:bold;">{Text("DownloadText")}</a>
-              </p>
-              """;
+        // Adjunto o no, el enlace va siempre. Lo único que cambia es la frase: cuando el fichero viaja
+        // adjunto el enlace es un extra, y cuando no cabía hay que decir por qué no está adjunto.
+        string lead = attach
+            ? $"{Text("Intro")} {string.Format(Text("LinkAlsoAvailable"), download.Days)}"
+            : string.Format(Text("IntroLink"), download.Days);
+
+        string intro = $"""
+            <p style="margin:0 0 16px;">{lead}</p>
+            <p style="margin:0 0 16px;">
+                <a href="{download.Url}" style="color:#4a6584;font-weight:bold;">{Text("DownloadText")}</a>
+            </p>
+            """;
 
         string bodyFragment = $"""
             <p style="margin:0 0 16px;">{string.Format(Text("Greeting"), receiverName)}</p>

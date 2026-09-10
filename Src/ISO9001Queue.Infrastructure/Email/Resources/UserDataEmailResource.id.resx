@@ -48,4 +48,4 @@
   <data name="DefaultReceiverName" xml:space="preserve">
     <value>Pelanggan</value>
   </data>
-<data name="IntroLink" xml:space="preserve"><value>Sesuai permintaan Anda, berikut salinan seluruh informasi yang kami simpan tentang Anda dalam sistem manajemen mutu kami, dalam format JSON. Berkasnya terlalu besar untuk dilampirkan, jadi Anda dapat mengunduhnya melalui tautan di bawah ini. Tautan berlaku selama {0} hari dan setelah itu berkas akan dihapus.</value></data><data name="DownloadText" xml:space="preserve"><value>Unduh data saya</value></data></root>
+<data name="IntroLink" xml:space="preserve"><value>Sesuai permintaan Anda, berikut salinan seluruh informasi yang kami simpan tentang Anda dalam sistem manajemen mutu kami, dalam format JSON. Berkasnya terlalu besar untuk dilampirkan, jadi Anda dapat mengunduhnya melalui tautan di bawah ini. Tautan berlaku selama {0} hari dan setelah itu berkas akan dihapus.</value></data><data name="DownloadText" xml:space="preserve"><value>Unduh data saya</value></data><data name="LinkAlsoAvailable" xml:space="preserve"><value>Anda juga dapat mengunduhnya melalui tautan di bawah ini selama {0} hari.</value></data></root>

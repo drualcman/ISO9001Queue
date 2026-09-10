@@ -48,4 +48,4 @@
   <data name="DefaultReceiverName" xml:space="preserve">
     <value>ลูกค้า</value>
   </data>
-<data name="IntroLink" xml:space="preserve"><value>ตามที่คุณร้องขอ นี่คือสำเนาข้อมูลทั้งหมดเกี่ยวกับคุณที่เราเก็บไว้ในระบบบริหารคุณภาพ ในรูปแบบ JSON ไฟล์มีขนาดใหญ่เกินกว่าจะแนบมาได้ คุณจึงดาวน์โหลดได้จากลิงก์ด้านล่าง ลิงก์ใช้งานได้ {0} วัน หลังจากนั้นไฟล์จะถูกลบ</value></data><data name="DownloadText" xml:space="preserve"><value>ดาวน์โหลดข้อมูลของฉัน</value></data></root>
+<data name="IntroLink" xml:space="preserve"><value>ตามที่คุณร้องขอ นี่คือสำเนาข้อมูลทั้งหมดเกี่ยวกับคุณที่เราเก็บไว้ในระบบบริหารคุณภาพ ในรูปแบบ JSON ไฟล์มีขนาดใหญ่เกินกว่าจะแนบมาได้ คุณจึงดาวน์โหลดได้จากลิงก์ด้านล่าง ลิงก์ใช้งานได้ {0} วัน หลังจากนั้นไฟล์จะถูกลบ</value></data><data name="DownloadText" xml:space="preserve"><value>ดาวน์โหลดข้อมูลของฉัน</value></data><data name="LinkAlsoAvailable" xml:space="preserve"><value>คุณยังดาวน์โหลดได้จากลิงก์ด้านล่างภายใน {0} วัน</value></data></root>

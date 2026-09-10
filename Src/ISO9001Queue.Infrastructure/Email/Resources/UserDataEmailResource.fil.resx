@@ -48,4 +48,4 @@
   <data name="DefaultReceiverName" xml:space="preserve">
     <value>Customer</value>
   </data>
-<data name="IntroLink" xml:space="preserve"><value>Gaya ng hiniling mo, narito ang kopya ng lahat ng impormasyong hawak namin tungkol sa iyo sa aming quality management system, sa format na JSON. Masyado itong malaki para ilakip, kaya maaari mo itong i-download sa link sa ibaba. Gumagana ang link nang {0} araw at pagkatapos ay buburahin ang file.</value></data><data name="DownloadText" xml:space="preserve"><value>I-download ang aking data</value></data></root>
+<data name="IntroLink" xml:space="preserve"><value>Gaya ng hiniling mo, narito ang kopya ng lahat ng impormasyong hawak namin tungkol sa iyo sa aming quality management system, sa format na JSON. Masyado itong malaki para ilakip, kaya maaari mo itong i-download sa link sa ibaba. Gumagana ang link nang {0} araw at pagkatapos ay buburahin ang file.</value></data><data name="DownloadText" xml:space="preserve"><value>I-download ang aking data</value></data><data name="LinkAlsoAvailable" xml:space="preserve"><value>Maaari mo rin itong i-download sa link sa ibaba sa loob ng {0} araw.</value></data></root>

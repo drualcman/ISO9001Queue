@@ -48,4 +48,4 @@
   <data name="DefaultReceiverName" xml:space="preserve">
     <value>Клиент</value>
   </data>
-<data name="IntroLink" xml:space="preserve"><value>По вашему запросу — копия всех данных о вас, которые хранятся в нашей системе менеджмента качества, в формате JSON. Файл слишком велик для вложения, поэтому его можно скачать по ссылке ниже. Ссылка действует {0} дней, после чего файл удаляется.</value></data><data name="DownloadText" xml:space="preserve"><value>Скачать мои данные</value></data></root>
+<data name="IntroLink" xml:space="preserve"><value>По вашему запросу — копия всех данных о вас, которые хранятся в нашей системе менеджмента качества, в формате JSON. Файл слишком велик для вложения, поэтому его можно скачать по ссылке ниже. Ссылка действует {0} дней, после чего файл удаляется.</value></data><data name="DownloadText" xml:space="preserve"><value>Скачать мои данные</value></data><data name="LinkAlsoAvailable" xml:space="preserve"><value>Его также можно скачать по ссылке ниже в течение {0} дней.</value></data></root>
