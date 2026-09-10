@@ -1,4 +1,5 @@
 using ISO9001.Core.Responses;
+using System.Text.Encodings.Web;
 
 namespace ISO9001Queue.Functions.QueueTriggers;
 
@@ -47,7 +48,17 @@ internal sealed class UserDataQueueFunction(
                 Incidents = incidents.DistinctBy(i => (i.EntityId, i.ReportedAt, i.Description)).ToList(),
                 Feedbacks = feedbacks.DistinctBy(f => (f.EntityId, f.CustomerId, f.ReportedAt, f.Rating)).ToList()
             };
-            byte[] jsonData = JsonSerializer.SerializeToUtf8Bytes(data, new JsonSerializerOptions { WriteIndented = true });
+            logger.LogInformation(
+                "User data export for {Identifiers} identifier(s): {Logs} logs, {Incidents} incidents, {Feedbacks} feedbacks",
+                identifiers.Count, data.AuditLogs.Count, data.Incidents.Count, data.Feedbacks.Count);
+
+            byte[] jsonData = JsonSerializer.SerializeToUtf8Bytes(data, new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                // Sin esto los acentos y la enye salen escapados (u00E1): valido, pero ilegible para
+                // quien abre el fichero, que es el unico que lo va a leer.
+                Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+            });
 
             await userDataEmailService.SendUserDataAsync(msg, jsonData);
             logger.LogInformation("User data export sent to {Email} ({Logs} logs, {Incidents} incidents, {Feedbacks} feedbacks)",

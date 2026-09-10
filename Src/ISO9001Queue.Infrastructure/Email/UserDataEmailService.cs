@@ -3,7 +3,10 @@ using System.Resources;
 
 namespace ISO9001Queue.Infrastructure.Email;
 
-internal sealed class UserDataEmailService(IEmailSender emailSender) : IUserDataEmailService
+internal sealed class UserDataEmailService(
+    IEmailSender emailSender,
+    IOptions<EmailOptions> emailOptions,
+    ILogger<UserDataEmailService> logger) : IUserDataEmailService
 {
     private static readonly ResourceManager Resources = new(
         "ISO9001Queue.Infrastructure.Email.Resources.UserDataEmailResource",
@@ -17,7 +20,6 @@ internal sealed class UserDataEmailService(IEmailSender emailSender) : IUserData
         string companyName = string.IsNullOrWhiteSpace(message.CompanyName) ? message.CompanyId : message.CompanyName;
         string receiverName = string.IsNullOrWhiteSpace(message.ReceiverName) ? Text("DefaultReceiverName") : message.ReceiverName;
         string timestamp = DateTime.UtcNow.ToString("yyyyMMdd-HHmmss");
-        string filename = $"quality-data-{timestamp}.json";
         string subject = $"[{companyName}] {Text("Subject")}";
 
         string bodyFragment = $"""
@@ -47,8 +49,11 @@ internal sealed class UserDataEmailService(IEmailSender emailSender) : IUserData
         string body = MailTemplates.GetEmailTemplate(bodyFragment, companyName, Text("Subject"),
             language, message.ReceiverAntiPhishing, Text("Footer"));
 
+        EmailAttachment attachment = UserDataAttachmentBuilder.Build(
+            jsonData, timestamp, emailOptions.Value.MaxAttachmentBytes, logger);
+
         // EmailSender throws on failure so the queue retries: a data export must reach the user.
         await emailSender.SendAsync(message.EmailCompanyId, subject, receiverName, message.ReceiverEmail, message.ReceiverAntiPhishing,
-            language, body, [new EmailAttachment(filename, jsonData)], cancellationToken);
+            language, body, [attachment], cancellationToken);
     }
 }

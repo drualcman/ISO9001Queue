@@ -54,6 +54,9 @@ public static class DependencyContainer
             EmailOptions opts = sp.GetRequiredService<IOptions<EmailOptions>>().Value;
             if (!string.IsNullOrWhiteSpace(opts.Url))
                 client.BaseAddress = new Uri(opts.Url);
+            // El valor por defecto de HttpClient son 100 segundos: un adjunto de verdad no llega a
+            // tiempo y la peticion se cancela sin haber mandado nada.
+            client.Timeout = TimeSpan.FromMinutes(Math.Max(1, opts.TimeoutMinutes));
         });
         services.AddScoped<IEmailSender, EmailSender>();
         services.AddScoped<IFeedbackEmailService, FeedbackEmailService>();
