@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>تصدير بياناتك الشخصية</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>عزيزنا {0}،</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>بناءً على طلبك، تجد مرفقًا بهذه الرسالة نسخة من جميع المعلومات المحفوظة عنك في نظام إدارة الجودة لدينا، بصيغة JSON.</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>قد يشمل التصدير، حسب الاقتضاء:</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>سجلات النشاط والتدقيق</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>بلاغات الحوادث المتعلقة بحسابك</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>الملاحظات التي أرسلتها</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>إذا لم تكن قد طلبت هذا التصدير أو كان لديك أي استفسار بشأن البيانات المدرجة، يُرجى التواصل مع فريق الدعم لدينا.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>مع أطيب التحيات،</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>فريق الجودة في {0}</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>أُنشئت هذه الرسالة تلقائيًا استجابةً لطلب بيانات شخصية.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>عميلنا</value>
+  </data>
+<data name="IntroLink" xml:space="preserve"><value>بناءً على طلبك، هذه نسخة من جميع المعلومات المحفوظة عنك في نظام إدارة الجودة لدينا، بصيغة JSON. وحجمها أكبر من أن تُرفق بالرسالة، لذا يمكنك تنزيلها من الرابط أدناه. ويعمل الرابط لمدة {0} من الأيام ثم يُحذف الملف.</value></data><data name="DownloadText" xml:space="preserve"><value>تنزيل بياناتي</value></data><data name="LinkAlsoAvailable" xml:space="preserve"><value>يمكنك أيضًا تنزيلها من الرابط أدناه خلال {0} من الأيام القادمة.</value></data></root>
