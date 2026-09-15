@@ -23,6 +23,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
 	  <!-- The Queues host runs on Linux; SkiaSharp (used by ImagingBlobService to generate
 		     thumbnails in the queue path) needs the Linux native libSkiaSharp here. The API
 		     Functions host is Windows and gets its native assets from the base SkiaSharp package. -->
