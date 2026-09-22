@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>Bản xuất dữ liệu cá nhân của bạn</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>Kính gửi {0},</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>Theo yêu cầu của bạn, đính kèm trong email này là bản sao toàn bộ thông tin mà hệ thống quản lý chất lượng của chúng tôi đang lưu về bạn, ở định dạng JSON.</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>Bản xuất có thể bao gồm, nếu có:</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>Hồ sơ hoạt động và kiểm toán</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>Báo cáo sự cố liên quan đến tài khoản của bạn</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>Phản hồi bạn đã gửi</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>Nếu bạn không yêu cầu bản xuất này hoặc có thắc mắc về dữ liệu bên trong, vui lòng liên hệ bộ phận hỗ trợ của chúng tôi.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Trân trọng,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>Đội ngũ Chất lượng của {0}</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Email này được tạo tự động để đáp lại một yêu cầu về dữ liệu cá nhân.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>Khách hàng</value>
+  </data>
+<data name="IntroLink" xml:space="preserve"><value>Theo yêu cầu của bạn, đây là bản sao toàn bộ thông tin mà hệ thống quản lý chất lượng của chúng tôi đang lưu về bạn, ở định dạng JSON. Tệp quá lớn để đính kèm, nên bạn có thể tải xuống từ liên kết bên dưới. Liên kết có hiệu lực trong {0} ngày và sau đó tệp sẽ bị xóa.</value></data><data name="DownloadText" xml:space="preserve"><value>Tải dữ liệu của tôi xuống</value></data><data name="LinkAlsoAvailable" xml:space="preserve"><value>Bạn cũng có thể tải xuống từ liên kết bên dưới trong {0} ngày tới.</value></data></root>
