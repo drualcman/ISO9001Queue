@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>A exportação dos seus dados pessoais</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>Caro(a) {0},</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>Conforme solicitado, encontra anexada a este e-mail uma cópia de toda a informação que mantemos sobre si no nosso sistema de gestão da qualidade, em formato JSON.</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>A exportação pode incluir, quando aplicável:</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>Registos de atividade e de auditoria</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>Relatórios de incidentes relacionados com a sua conta</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>Comentários que enviou</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>Se não solicitou esta exportação ou tiver dúvidas sobre os dados incluídos, contacte a nossa equipa de suporte.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Com os melhores cumprimentos,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>A Equipa de Qualidade da {0}</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Este e-mail foi gerado automaticamente em resposta a um pedido de dados pessoais.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+<data name="IntroLink" xml:space="preserve"><value>Conforme solicitado, segue uma cópia de toda a informação que mantemos sobre si no nosso sistema de gestão da qualidade, em formato JSON. É demasiado grande para ser anexada, pelo que pode transferi-la a partir da ligação abaixo. A ligação funciona durante {0} dias e o ficheiro é eliminado depois disso.</value></data><data name="DownloadText" xml:space="preserve"><value>Transferir os meus dados</value></data><data name="LinkAlsoAvailable" xml:space="preserve"><value>Também pode transferi-lo a partir da ligação abaixo durante os próximos {0} dias.</value></data></root>
