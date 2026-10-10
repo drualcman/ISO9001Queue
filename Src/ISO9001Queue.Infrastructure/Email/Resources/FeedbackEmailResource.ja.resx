@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ThankYouSubject" xml:space="preserve">
+    <value>フィードバックをありがとうございます</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>{0} 様</value>
+  </data>
+  <data name="ThankYouIntro" xml:space="preserve">
+    <value>フィードバックをありがとうございます！&lt;strong&gt;{0}/5&lt;/strong&gt;（{1}）の評価を受け付けました。</value>
+  </data>
+  <data name="YourComments" xml:space="preserve">
+    <value>いただいたコメント：</value>
+  </data>
+  <data name="ThankYouOutro" xml:space="preserve">
+    <value>いただいたご意見は、サービスの継続的な改善に役立てます。</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>今後ともよろしくお願いいたします。</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>品質管理チーム</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>このメールは、お送りいただいたフィードバックに応じて自動的に送信されました。</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>ご利用者</value>
+  </data>
+</root>

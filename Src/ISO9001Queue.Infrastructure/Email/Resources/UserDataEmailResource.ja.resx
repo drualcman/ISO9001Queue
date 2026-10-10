@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>個人データのエクスポート</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>{0} 様</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>ご依頼に基づき、品質管理システムで保有しているお客様に関するすべての情報のコピーを JSON 形式でこのメールに添付しております。</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>エクスポートには、該当する場合、以下が含まれることがあります。</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>アクティビティおよび監査の記録</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>お客様のアカウントに関するインシデント報告</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>お客様が送信したフィードバック</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>このエクスポートをご依頼されていない場合、または含まれるデータについてご質問がある場合は、サポートチームまでお問い合わせください。</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>今後ともよろしくお願いいたします。</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>{0} 品質管理チーム</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>このメールは、個人データに関するご依頼に応じて自動的に送信されました。</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>ご利用者</value>
+  </data>
+<data name="IntroLink" xml:space="preserve"><value>ご依頼に基づき、品質管理システムで保有しているお客様に関するすべての情報のコピーを JSON 形式でお送りします。ファイルが大きすぎて添付できないため、以下のリンクからダウンロードしてください。リンクは {0} 日間有効で、その後ファイルは削除されます。</value></data><data name="DownloadText" xml:space="preserve"><value>データをダウンロード</value></data><data name="LinkAlsoAvailable" xml:space="preserve"><value>今後 {0} 日間は、以下のリンクからもダウンロードできます。</value></data></root>
