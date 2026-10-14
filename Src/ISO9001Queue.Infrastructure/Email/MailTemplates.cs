@@ -27,6 +27,7 @@ internal static class MailTemplates
         if (code.StartsWith("vi")) return ("vi", CultureInfo.GetCultureInfo("vi"));
         if (code.StartsWith("pt")) return ("pt", CultureInfo.GetCultureInfo("pt"));
         if (code.StartsWith("ja")) return ("ja", CultureInfo.GetCultureInfo("ja"));
+        if (code.StartsWith("el")) return ("el", CultureInfo.GetCultureInfo("el"));
         return ("en", CultureInfo.InvariantCulture);
     }
 

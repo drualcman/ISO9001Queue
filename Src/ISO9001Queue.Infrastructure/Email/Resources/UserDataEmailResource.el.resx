@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>Η εξαγωγή των προσωπικών σας δεδομένων</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>Γεια σας {0},</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>Όπως ζητήσατε, συνημμένο σε αυτό το email θα βρείτε αντίγραφο όλων των πληροφοριών που διατηρούνται για εσάς στο σύστημα διαχείρισης ποιότητας, σε μορφή JSON.</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>Η εξαγωγή μπορεί να περιλαμβάνει, κατά περίπτωση:</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>Αρχεία δραστηριότητας και ελέγχου</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>Αναφορές συμβάντων που σχετίζονται με τον λογαριασμό σας</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>Σχόλια που έχετε υποβάλει</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>Αν δεν ζητήσατε αυτή την εξαγωγή ή έχετε απορίες σχετικά με τα δεδομένα που περιλαμβάνονται, επικοινωνήστε με την ομάδα υποστήριξής μας.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Με εκτίμηση,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>Η ομάδα ποιότητας του {0}</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Αυτό το email δημιουργήθηκε αυτόματα ως απάντηση σε αίτημα προσωπικών δεδομένων.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>Πελάτη</value>
+  </data>
+<data name="IntroLink" xml:space="preserve"><value>Όπως ζητήσατε, ακολουθεί αντίγραφο όλων των πληροφοριών που διατηρούνται για εσάς στο σύστημα διαχείρισης ποιότητας, σε μορφή JSON. Είναι πολύ μεγάλο για να επισυναφθεί, οπότε μπορείτε να το κατεβάσετε από τον παρακάτω σύνδεσμο. Ο σύνδεσμος λειτουργεί για {0} ημέρες και στη συνέχεια το αρχείο διαγράφεται.</value></data><data name="DownloadText" xml:space="preserve"><value>Λήψη των δεδομένων μου</value></data><data name="LinkAlsoAvailable" xml:space="preserve"><value>Μπορείτε επίσης να το κατεβάσετε από τον παρακάτω σύνδεσμο τις επόμενες {0} ημέρες.</value></data></root>
