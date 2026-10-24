@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ThankYouSubject" xml:space="preserve">
+    <value>Tack för din återkoppling</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>Hej {0},</value>
+  </data>
+  <data name="ThankYouIntro" xml:space="preserve">
+    <value>Tack för din återkoppling! Vi har tagit emot ditt betyg &lt;strong&gt;{0}/5&lt;/strong&gt; ({1}).</value>
+  </data>
+  <data name="YourComments" xml:space="preserve">
+    <value>Dina kommentarer:</value>
+  </data>
+  <data name="ThankYouOutro" xml:space="preserve">
+    <value>Din åsikt hjälper oss att ständigt förbättra vår tjänst.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Vänliga hälsningar,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>Kvalitetsteamet</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Det här e-postmeddelandet skickades automatiskt som svar på återkoppling som du har lämnat.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>kund</value>
+  </data>
+</root>

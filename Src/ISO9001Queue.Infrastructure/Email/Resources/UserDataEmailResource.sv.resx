@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>Export av dina personuppgifter</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>Hej {0},</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>Som du begärde bifogas i det här e-postmeddelandet en kopia av all information om dig som finns i vårt kvalitetsledningssystem, i JSON-format.</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>Exporten kan, i förekommande fall, innehålla:</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>Aktivitets- och granskningsposter</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>Incidentrapporter som rör ditt konto</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>Återkoppling som du har lämnat</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>Om du inte har begärt den här exporten eller har frågor om de uppgifter som ingår, kontakta vårt supportteam.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Vänliga hälsningar,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>Kvalitetsteamet på {0}</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Det här e-postmeddelandet skapades automatiskt som svar på en begäran om personuppgifter.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>kund</value>
+  </data>
+<data name="IntroLink" xml:space="preserve"><value>Som du begärde finns här en kopia av all information om dig som finns i vårt kvalitetsledningssystem, i JSON-format. Den är för stor för att bifogas, så du kan ladda ned den via länken nedan. Länken fungerar i {0} dagar och därefter raderas filen.</value></data><data name="DownloadText" xml:space="preserve"><value>Ladda ned mina uppgifter</value></data><data name="LinkAlsoAvailable" xml:space="preserve"><value>Du kan också ladda ned den via länken nedan under de kommande {0} dagarna.</value></data></root>
