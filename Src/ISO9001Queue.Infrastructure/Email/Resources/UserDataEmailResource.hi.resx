@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>आपके निजी डेटा का निर्यात</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>प्रिय {0},</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>आपके अनुरोध के अनुसार, इस ईमेल के साथ हमारी गुणवत्ता प्रबंधन प्रणाली में आपके बारे में रखी गई सारी जानकारी की एक प्रति JSON प्रारूप में संलग्न है।</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>निर्यात में, जहाँ लागू हो, ये शामिल हो सकते हैं:</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>गतिविधि और ऑडिट रिकॉर्ड</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>आपके खाते से जुड़ी घटना रिपोर्ट</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>आपके भेजे गए फ़ीडबैक</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>यदि आपने यह निर्यात नहीं माँगा था या शामिल डेटा के बारे में आपका कोई प्रश्न है, तो कृपया हमारी सहायता टीम से संपर्क करें।</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>सादर,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>{0} गुणवत्ता टीम</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>यह ईमेल निजी डेटा के अनुरोध के जवाब में अपने आप बनाया गया है।</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>ग्राहक</value>
+  </data>
+<data name="IntroLink" xml:space="preserve"><value>आपके अनुरोध के अनुसार, यह रही हमारी गुणवत्ता प्रबंधन प्रणाली में आपके बारे में रखी गई सारी जानकारी की एक प्रति, JSON प्रारूप में। फ़ाइल संलग्न करने के लिए बहुत बड़ी है, इसलिए आप इसे नीचे दिए गए लिंक से डाउनलोड कर सकते हैं। लिंक {0} दिनों तक काम करेगा और उसके बाद फ़ाइल हटा दी जाएगी।</value></data><data name="DownloadText" xml:space="preserve"><value>मेरा डेटा डाउनलोड करें</value></data><data name="LinkAlsoAvailable" xml:space="preserve"><value>आप इसे अगले {0} दिनों तक नीचे दिए गए लिंक से भी डाउनलोड कर सकते हैं।</value></data></root>
