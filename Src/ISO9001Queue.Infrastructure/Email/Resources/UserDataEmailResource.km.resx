@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>ការនាំចេញទិន្នន័យផ្ទាល់ខ្លួនរបស់អ្នក</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>ជម្រាបសួរ {0},</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>តាមការស្នើសុំ អ្នកនឹងឃើញភ្ជាប់មកជាមួយអ៊ីមែលនេះនូវច្បាប់ចម្លងនៃព័ត៌មានទាំងអស់ដែលយើងរក្សាទុកអំពីអ្នកនៅក្នុងប្រព័ន្ធគ្រប់គ្រងគុណភាពរបស់យើង ក្នុងទម្រង់ JSON។</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>ការនាំចេញអាចរួមបញ្ចូល ប្រសិនបើមាន៖</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>កំណត់ត្រាសកម្មភាព និងសវនកម្ម</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>របាយការណ៍ឧប្បត្តិហេតុទាក់ទងនឹងគណនីរបស់អ្នក</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>មតិកែលម្អដែលអ្នកបានដាក់ស្នើ</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>ប្រសិនបើអ្នកមិនបានស្នើសុំការនាំចេញនេះ ឬមានសំណួរអំពីទិន្នន័យដែលបានរួមបញ្ចូល សូមទាក់ទងក្រុមជំនួយរបស់យើង។</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>ដោយក្ដីគោរព</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>ក្រុមការងារគុណភាព {0}</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>អ៊ីមែលនេះត្រូវបានបង្កើតដោយស្វ័យប្រវត្តិ ដើម្បីឆ្លើយតបនឹងសំណើទិន្នន័យផ្ទាល់ខ្លួន។</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>អតិថិជន</value>
+  </data>
+<data name="IntroLink" xml:space="preserve"><value>តាមការស្នើសុំ នេះជាច្បាប់ចម្លងនៃព័ត៌មានទាំងអស់ដែលយើងរក្សាទុកអំពីអ្នកនៅក្នុងប្រព័ន្ធគ្រប់គ្រងគុណភាពរបស់យើង ក្នុងទម្រង់ JSON។ វាធំពេកមិនអាចភ្ជាប់បាន ដូច្នេះអ្នកអាចទាញយកវាពីតំណខាងក្រោម។ តំណនេះដំណើរការរយៈពេល {0} ថ្ងៃ ហើយឯកសារនឹងត្រូវលុបបន្ទាប់ពីនោះ។</value></data><data name="DownloadText" xml:space="preserve"><value>ទាញយកទិន្នន័យរបស់ខ្ញុំ</value></data><data name="LinkAlsoAvailable" xml:space="preserve"><value>អ្នកក៏អាចទាញយកវាពីតំណខាងក្រោមក្នុងរយៈពេល {0} ថ្ងៃខាងមុខផងដែរ។</value></data></root>
