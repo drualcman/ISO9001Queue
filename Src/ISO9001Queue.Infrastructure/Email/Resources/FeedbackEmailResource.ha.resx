@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ThankYouSubject" xml:space="preserve">
+    <value>Mun gode da ra'ayinka</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>Ya {0},</value>
+  </data>
+  <data name="ThankYouIntro" xml:space="preserve">
+    <value>Mun gode da ra'ayinka! Mun karɓi ƙimar da ka bayar ta &lt;strong&gt;{0}/5&lt;/strong&gt; ({1}).</value>
+  </data>
+  <data name="YourComments" xml:space="preserve">
+    <value>Sharhinka:</value>
+  </data>
+  <data name="ThankYouOutro" xml:space="preserve">
+    <value>Ra'ayinka yana taimaka mana mu ci gaba da inganta aikinmu.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Da gaisuwa,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>Ƙungiyar Inganci</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>An aika wannan imel kai tsaye a matsayin amsa ga ra'ayin da ka aiko.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>Abokin ciniki</value>
+  </data>
+</root>

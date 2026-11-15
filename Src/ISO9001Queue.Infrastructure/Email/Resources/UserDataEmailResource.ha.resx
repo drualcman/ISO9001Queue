@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>Fitar da bayananka na sirri</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>Ya {0},</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>Kamar yadda ka nema, a haɗe da wannan imel za ka sami kwafin duk bayanan da aka adana game da kai a tsarinmu na gudanar da inganci, a tsarin JSON.</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>Fitarwar na iya haɗawa, inda ya dace:</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>Bayanan ayyuka da na bincike</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>Rahotannin abubuwan da suka faru masu alaƙa da asusunka</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>Ra'ayoyin da ka aiko</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>Idan ba kai ka nemi wannan fitarwar ba ko kana da tambayoyi game da bayanan da ke ciki, da fatan za ka tuntuɓi ƙungiyar tallafinmu.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Da gaisuwa,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>Ƙungiyar Inganci ta {0}</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>An samar da wannan imel kai tsaye a matsayin amsa ga buƙatar bayanan sirri.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>Abokin ciniki</value>
+  </data>
+<data name="IntroLink" xml:space="preserve"><value>Kamar yadda ka nema, ga kwafin duk bayanan da aka adana game da kai a tsarinmu na gudanar da inganci, a tsarin JSON. Ya yi girma da yawa don a haɗa shi, don haka za ka iya sauke shi daga mahaɗin da ke ƙasa. Mahaɗin yana aiki na kwanaki {0} kuma ana goge fayil ɗin bayan haka.</value></data><data name="DownloadText" xml:space="preserve"><value>Sauke bayanana</value></data><data name="LinkAlsoAvailable" xml:space="preserve"><value>Za ka iya kuma sauke shi daga mahaɗin da ke ƙasa a cikin kwanaki {0} masu zuwa.</value></data></root>
