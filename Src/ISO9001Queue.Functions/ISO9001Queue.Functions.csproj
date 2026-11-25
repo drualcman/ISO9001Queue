@@ -28,6 +28,7 @@
 		     thumbnails in the queue path) needs the Linux native libSkiaSharp here. The API
 		     Functions host is Windows and gets its native assets from the base SkiaSharp package. -->
 	  <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="4.151.1" />
+	  <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.15" />
 
   </ItemGroup>
 
