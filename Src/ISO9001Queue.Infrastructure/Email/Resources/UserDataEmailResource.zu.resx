@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Subject" xml:space="preserve">
+    <value>Ukukhishwa kwemininingwane yakho yomuntu siqu</value>
+  </data>
+  <data name="Greeting" xml:space="preserve">
+    <value>Sawubona {0},</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>Njengoba ucelile, kunamathiselwe kule imeyili ikhophi yalo lonke ulwazi esinalo ngawe ohlelweni lwethu lokuphatha ikhwalithi, ngefomethi ye-JSON.</value>
+  </data>
+  <data name="MayInclude" xml:space="preserve">
+    <value>Okukhishiwe kungafaka, lapho kufanele khona:</value>
+  </data>
+  <data name="ItemLogs" xml:space="preserve">
+    <value>Amarekhodi emisebenzi nawokuhlola</value>
+  </data>
+  <data name="ItemIncidents" xml:space="preserve">
+    <value>Imibiko yezigameko ehlobene ne-akhawunti yakho</value>
+  </data>
+  <data name="ItemFeedback" xml:space="preserve">
+    <value>Imibono oyithumele</value>
+  </data>
+  <data name="Outro" xml:space="preserve">
+    <value>Uma ungakucelanga lokhu kukhishwa noma unemibuzo mayelana nemininingwane efakiwe, sicela uxhumane nethimba lethu losekelo.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Ozithobayo,</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>Ithimba Lekhwalithi le-{0}</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Le imeyili yenziwe ngokuzenzakalelayo njengempendulo yesicelo semininingwane yomuntu siqu.</value>
+  </data>
+  <data name="DefaultReceiverName" xml:space="preserve">
+    <value>Khasimende</value>
+  </data>
+<data name="IntroLink" xml:space="preserve"><value>Njengoba ucelile, nansi ikhophi yalo lonke ulwazi esinalo ngawe ohlelweni lwethu lokuphatha ikhwalithi, ngefomethi ye-JSON. Inkulu kakhulu ukuthi inamathiselwe, ngakho ungayilanda kusixhumanisi esingezansi. Isixhumanisi sisebenza izinsuku ezingu-{0} bese ifayela liyasuswa ngemva kwalokho.</value></data><data name="DownloadText" xml:space="preserve"><value>Landa imininingwane yami</value></data><data name="LinkAlsoAvailable" xml:space="preserve"><value>Ungayilanda futhi kusixhumanisi esingezansi ezinsukwini ezingu-{0} ezizayo.</value></data></root>
